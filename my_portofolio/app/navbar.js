@@ -87,7 +87,7 @@ export default function Navbar() {
                   About
                 </Link>
                 <Link
-                  href="#"
+                  href="/project"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   Projects
@@ -130,7 +130,7 @@ export default function Navbar() {
             About
           </Link>
           <Link
-            href="#"
+            href="/project"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
           >
             Projects
