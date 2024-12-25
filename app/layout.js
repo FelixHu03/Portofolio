@@ -3,6 +3,7 @@ import Navbar from "./navbar";
 import './globals.css';
 import { useEffect } from 'react';
 import Script from "next/script";
+import Link from "next/link";
 
 export default function Layout({ children }) {
   useEffect(() => {
@@ -74,15 +75,31 @@ export default function Layout({ children }) {
         />
       </head>
       <body>
-      <div className="min-h-screen">
+        <div className="min-h-screen">
           <div id="particles-js" className="fixed inset-0 z-0" />
           <div className="fixed top-0 left-0 right-0 z-50">
             <Navbar />
           </div>
           <div className="relative z-10 pt-16">
             {children}
+            
           </div>
         </div>
+        <footer className="flex flex-row items-center justify-center gap-2 text-xl font-serif pb-4 fixed bottom-0 w-full ">
+      <span>&copy; COPYRIGHT By Felix</span>
+      <span>Background by</span>
+      <a 
+        href="https://vincentgarreau.com" 
+        className="text-blue-500 hover:underline cursor-pointer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Vincent Garreau
+      </a>
+    </footer>
+
+
+
       </body>
     </html>
   );
