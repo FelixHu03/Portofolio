@@ -10,7 +10,7 @@ export default function Home() {
         <div className="text-center pt-10">
           <div className="flex justify-center items-center space-x-4">
             <Image
-              src="https://your-vercel-domain.com/images/fotosendiri.jpg"
+              src="/Images/fotosendiri.jpg"
               alt="foto"
               width={300}
               height={300}

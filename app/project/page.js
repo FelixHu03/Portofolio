@@ -12,7 +12,7 @@ export default function Project() {
                     <div className="relative overflow-hidden rounded-xl flex">
                         <a href="/ComingSoon">
                             <Image
-                                src="/Project/carcare.png"
+                                src="/project/carcare.png"
                                 alt="Carcare"
                                 width={300}
                                 height={200}
@@ -24,7 +24,7 @@ export default function Project() {
                     <div className="relative overflow-hidden rounded-xl flex">
                         <a href="https://mdpweb-project-uas-if21-team-novice.vercel.app/" target="_blank">
                             <Image
-                                src="/Project/lioxHotel.png"
+                                src="/project/lioxHotel.png"
                                 alt="Liox Hotel"
                                 width={300}
                                 height={300}
@@ -37,7 +37,7 @@ export default function Project() {
                     <div className="relative overflow-hidden rounded-xl">
                         <a href="/ComingSoon">
                             <Image
-                                src="/Project/pocketDhammapada.png"
+                                src="/project/pocketDhammapada.png"
                                 alt="Carcare"
                                 width={300}
                                 height={200}
@@ -50,7 +50,7 @@ export default function Project() {
                     <div className="relative overflow-hidden rounded-xl">
                         <a href="/ComingSoon">
                             <Image
-                                src="/Project/likelyColor.png"
+                                src="/project/likelyColor.png"
                                 alt="Carcare"
                                 width={300}
                                 height={200}
