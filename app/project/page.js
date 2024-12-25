@@ -81,7 +81,7 @@ export default function Project() {
                             </div>
                             <div className="bg-black/50 backdrop-blur-sm rounded-lg px-4 py-2">
                                 <h1 className="text-white text-lg">Likely Color</h1>
-                                <p>Adalah sebuah website yang dapat membedakan warna dasar seperi mejikuhibiniu(merah, jingga, kuning, hijau, biru, nila, dan ungu) yang akan mengeluarkan hasil akhir dengan nilai RGB, HSL, dan HSV<br />Likely Color merupakan website yang menggunakan framework flask.</p>
+                                <p>Adalah sebuah website yang dapat membedakan warna dasar seperi mejikuhibiniu(merah, jingga, kuning, hijau, biru, nila, dan ungu) yang akan mengeluarkan hasil akhir dengan nilai RGB, HSL, dan HSV.<br />Likely Color merupakan website yang menggunakan framework flask.</p>
 
                             </div>
                         </a>
