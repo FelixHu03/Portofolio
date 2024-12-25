@@ -60,13 +60,16 @@ export default function Navbar() {
           {/* Logo and desktop menu */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <Image
-                className="h-8 w-auto"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-                width={32}
-                height={32}
-              />
+              <Link href="/">
+
+                <Image
+                  className="h-8 w-auto"
+                  src="/Images/logoLIX.png"
+                  alt="LIX"
+                  width={40}
+                  height={40}
+                />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
