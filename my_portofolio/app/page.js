@@ -17,15 +17,15 @@ export default function Home() {
               className="rounded-full animate-bounce-once"
             />
             <h1 className="text-2xl">
-              Hello Everyone my name is <strong className="text-5xl text-blue-600">Felix</strong> <span className="text-5xl">!</span>
+              Hello Everyone my name is <strong className="text-5xl text-lime-600">Felix</strong> <span className="text-5xl">!</span>
             </h1>
           </div>
 
-          {/* Div untuk My Contact di bawah h1 */}
+          {/* My Contact*/}
           <div className="mt-4 flex justify-center items-center space-x-4">
-            <h3 className="text-lg">My Contact <span className="text-xl font-bold">{'>'}</span></h3>
+            <h3 className="text-xl">My Contact <span className="text-xl font-bold">{'>'}</span></h3>
             {/* Instagram */}
-            <a href="https://www.instagram.com/felixwili62?igsh=MWdsdjhqcm1qMnMwZg==">
+            <a href="https://www.instagram.com/felixwili62?igsh=MWdsdjhqcm1qMnMwZg=="target="_blank">
               <Image
                 src="/iconContact/instagram.png"
                 alt="Instagram"
@@ -36,7 +36,7 @@ export default function Home() {
             </a>
             {/* Github */}
             <div className="-mr-3.5">
-              <a href="https://github.com/FelixHu03">
+              <a href="https://github.com/FelixHu03"target="_blank">
                 <Image
                   src="/iconContact/logoGithub.png"
                   alt="github"
@@ -49,7 +49,7 @@ export default function Home() {
 
             {/* facebook */}
             <div className="-mr-3.5">
-              <a href="https://github.com/FelixHu03">
+              <a href="https://www.facebook.com/share/5vJbTijyPZwc4izM/" target="_blank">
                 <Image
                   src="/iconContact/facebook.png"
                   alt="facebook"

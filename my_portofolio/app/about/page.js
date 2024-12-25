@@ -1,62 +1,46 @@
 "use client";
-import { useState, useEffect } from 'react';
+
+import HoverText from "../componest/hoverText";
+import SkillBar from "../componest/skillBar";
+
+const ABOUT_TEXT = `I am Felix, a third semester Informatics Engineering student at Multi Data University Palembang. 
+I have a great interest in software development, especially in web programming and other technologies. 
+I enjoy solving problems, and exploring new things.`;
+
+const SKILLS_DATA = [
+  { skillName: "HTML", percentage: 97 },
+  { skillName: "CSS", percentage: 90 },
+  { skillName: "JavaScript", percentage: 80 },
+  { skillName: "PHP", percentage: 79 },
+  { skillName: "Figma", percentage: 70 },
+];
 
 export default function About() {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-  const [textPosition, setTextPosition] = useState({ left: 0, top: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setCursorPosition({ x: e.pageX, y: e.pageY });
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  useEffect(() => {
-    const textElement = document.getElementById('text-hover');
-    if (textElement) {
-      const rect = textElement.getBoundingClientRect();
-      setTextPosition({
-        left: rect.left,
-        top: rect.top + window.scrollY
-      });
-    }
-  }, []);
-
   return (
-    <>
-      <main className="flex flex-col ml-5 items-center mt-44 min-h-screen font-serif">
-        <h1 className="text-6xl">
+    <main className="flex flex-col items-center mt-24 min-h-screen font-serif">
+      <div className="w-full max-w-6xl px-8 relative">
+        <h1 className="text-6xl text-center mb-12">
           WHO AM I?
         </h1>
-        <article
-          id="text-hover"
-          className="mt-4 w-96 relative"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <span className={`relative z-10 transition-colors duration-300 ${isHovered ? 'text-black' : 'text-gray-900'}`}>
-            I am Felix, a third semester Informatics Engineering student at Multi Data University Palembang. 
-            I have a great interest in software development, especially in web programming and other technologies. 
-            I enjoy solving problems, and exploring new things.
-          </span>
-          
-          {isHovered && (
-            <div
-              className="absolute bg-yellow-300 opacity-90 w-32 h-8 rounded-lg transition-all duration-100 ease-out pointer-events-none"
-              style={{
-                left: `${cursorPosition.x - textPosition.left - 64}px`,
-                top: `${cursorPosition.y - textPosition.top - 16}px`,
-              }}
-            />
-          )}
-        </article>
-      </main>
-    </>
+        
+        <div className="flex flex-row justify-between gap-12">
+          {/* Left side - About text */}
+          <div className="w-1/2">
+            <HoverText text={ABOUT_TEXT} />
+          </div>
+
+          {/* Right side - Skills */}
+          <div className="w-1/2 bg-gray-800 p-6 rounded-lg">
+            {SKILLS_DATA.map((skill, index) => (
+              <SkillBar
+                key={index}
+                skillName={skill.skillName}
+                percentage={skill.percentage}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
