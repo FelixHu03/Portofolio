@@ -68,18 +68,20 @@ export default function Layout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script 
+        <Script
           src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
           strategy="beforeInteractive"
         />
       </head>
-      <body className="bg-gradient-to-r from-slate-900 to-blue-900 min-h-screen relative overflow-hidden">
-        <div id="particles-js" className="absolute inset-0 z-0" />
-        <div className="relative z-10">
-          <Navbar />
-          <main className="pt-16">
+      <body>
+      <div className="min-h-screen">
+          <div id="particles-js" className="fixed inset-0 z-0" />
+          <div className="fixed top-0 left-0 right-0 z-50">
+            <Navbar />
+          </div>
+          <div className="relative z-10 pt-16">
             {children}
-          </main>
+          </div>
         </div>
       </body>
     </html>

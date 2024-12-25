@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const HoverText = ({ text }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const [textPosition, setTextPosition] = useState({ left: 0, top: 0 });
+  const [textPosition, setTextPosition] = useState({ left: 0, top: -8 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -37,14 +37,14 @@ const HoverText = ({ text }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className={`relative z-10 block text-lg leading-relaxed
-        ${isHovered ? 'text-black' : 'text-white'}`}
+        ${isHovered ? 'text-amber-800' : 'text-white'}`}
       >
         {text}
       </span>
 
       {isHovered && (
         <div
-          className="absolute bg-yellow-300 opacity-90 w-32 h-8 rounded-lg transition-all duration-100 ease-out pointer-events-none"
+          className="absolute bg-yellow-200 opacity-90 w-32 h-8 rounded-lg transition-all duration-100 ease-out pointer-events-none"
           style={{
             left: `${cursorPosition.x - textPosition.left - 64}px`,
             top: `${cursorPosition.y - textPosition.top - 16}px`,

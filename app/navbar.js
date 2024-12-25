@@ -97,8 +97,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Rest of the code remains the same */}
-          {/* ... */}
         </div>
       </div>
 

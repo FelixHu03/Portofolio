@@ -24,12 +24,10 @@ export default function About() {
         </h1>
         
         <div className="flex flex-row justify-between gap-12">
-          {/* Left side - About text */}
           <div className="w-1/2">
             <HoverText text={ABOUT_TEXT} />
           </div>
 
-          {/* Right side - Skills */}
           <div className="w-1/2 bg-gray-800 p-6 rounded-lg">
             {SKILLS_DATA.map((skill, index) => (
               <SkillBar
